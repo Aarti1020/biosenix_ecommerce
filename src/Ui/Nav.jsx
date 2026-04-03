@@ -202,22 +202,25 @@ const Nav = () => {
       </div>
 
       {/* 🔹 Internships Dropdown */}
-      <div>
-        <div
-          onClick={() =>
-            setActiveMenu(activeMenu === "internship" ? null : "internship")
-          }
-          className="cursor-pointer font-semibold flex justify-between"
-        >
-          Internships <span>{activeMenu === "internship" ? "▲" : "▼"}</span>
-        </div>
+          <div>
+  <div className="cursor-pointer font-semibold flex justify-between items-center">
+    <Link href="/internships" className="flex-1">
+      Jobs
+    </Link>
+    <span
+      onClick={() => setActiveMenu(activeMenu === "internship" ? null : "internship")}
+      className="px-2"
+    >
+      {activeMenu === "internship" ? "▲" : "▼"}
+    </span>
+  </div>
 
-        {activeMenu === "internship" && (
-          <div className="mt-2 pl-3">
-            <InternshipDropdown />
-          </div>
-        )}
-      </div>
+  {activeMenu === "internship" && (
+    <div className="mt-2 pl-3">
+      <InternshipDropdown />
+    </div>
+  )}
+</div>
 
       {/* 🔹 Courses Dropdown */}
       <div>

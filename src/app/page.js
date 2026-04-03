@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="w-full  linear-gradient(180deg, #e9f5ff 0, #c4deff 129.9%) to-white overflow-x-hidden">
       {/* Hero section with full viewport height */}
-      <section className="relative w-full h-screen">
+      <section className="relative h-screen">
         <HeroSection />
         
       

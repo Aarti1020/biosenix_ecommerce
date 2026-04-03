@@ -88,11 +88,11 @@ const Footer = () => {
           <ul className="flex flex-col gap-3">
             <li>
               <a
-                href="mailto:Contact@hireinglobal.com"
+                href="mailto:contact@ebrainsoftwareandsolutions.com"
                 className="flex items-center gap-3 bg-white/5 hover:bg-cyan-400/10 border border-white/10 hover:border-cyan-400/20 rounded-xl px-4 py-3 text-sm text-white transition-all duration-200 group"
               >
                 <Mail className="w-4 h-4 text-cyan-400 shrink-0" />
-                Contact@hireinglobal.com
+                contact@ebrainsoftwareandsolutions.com
               </a>
             </li>
             <li>
@@ -108,7 +108,7 @@ const Footer = () => {
             </li>
             <li className="flex items-start gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white">
               <MapPin className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
-              <span className="leading-relaxed">Near Gitanjali Chokdi, Pij Road, Nadiad, Gujarat – 387002</span>
+              <span className="leading-relaxed">1st Floor, R.M.Nagar Main Road, Doddabanswadi, Bangalore, Karnataka</span>
             </li>
           </ul>
         </div>
@@ -121,7 +121,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p className="text-blue-200/40 text-xs">
-          © {new Date().getFullYear()} Hire in Global. All rights reserved.
+          © {new Date().getFullYear()} Ebrain Software and Solutions. All rights reserved.
         </p>
         <div className="flex items-center gap-4 text-xs text-blue-200/40">
           <Link href="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>

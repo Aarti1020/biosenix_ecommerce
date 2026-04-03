@@ -101,15 +101,15 @@ export default function HeroSection() {
   const nextSlide = () => { setCurrent((prev) => prev + 1); setTransition(true); };
 
   const realIndex =
-  current === 0 ? slides.length - 1
-  : current === extendedSlides.length - 1 ? 0
-  : current - 1;
+    current === 0 ? slides.length - 1
+    : current === extendedSlides.length - 1 ? 0
+    : current - 1;
 
-const slide = slides[realIndex] ?? slides[0]; // ← add this fallback
+  const slide = slides[realIndex] ?? slides[0];
 
   return (
     <>
-      <div className="relative w-full h-[480px] sm:h-[520px] md:h-[600px] overflow-hidden">
+      <div className="relative w-full h-[420px] sm:h-[520px] md:h-[600px] lg:h-[650px] overflow-hidden">
 
         {/* Slides */}
         <div
@@ -120,17 +120,17 @@ const slide = slides[realIndex] ?? slides[0]; // ← add this fallback
           }}
         >
           {extendedSlides.map((s, index) => (
-            <div key={index} className="min-w-full h-full relative">
-              <Image
-                src={s.image}
-                alt="carousel image"
-                fill
-                className="object-cover object-center"
-                priority={index === 1}
-              />
-              {/* stronger overlay on mobile so text is always readable */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-950/70 to-blue-950/40 sm:from-blue-950/85 sm:via-blue-950/50 sm:to-transparent" />
-            </div>
+            <div key={index} className="min-w-full h-full relative flex-shrink-0">
+  <Image
+    src={s.image}
+    alt="carousel image"
+    fill
+    sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 100vw"
+    className="object-cover object-center"
+    priority={index <= 2}
+  />
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-950/70 to-blue-950/40 sm:from-blue-950/85 sm:via-blue-950/50 sm:to-transparent" />
+</div>
           ))}
         </div>
 
@@ -151,7 +151,7 @@ const slide = slides[realIndex] ?? slides[0]; // ← add this fallback
               {slide.headingEnd}
             </h1>
 
-            {/* Description — hidden on very small screens to avoid clutter */}
+            {/* Description */}
             <p className="hidden xs:block sm:block text-blue-100/80 text-sm leading-relaxed max-w-md line-clamp-3 sm:line-clamp-none">
               {slide.description}
             </p>
@@ -175,7 +175,7 @@ const slide = slides[realIndex] ?? slides[0]; // ← add this fallback
           </div>
         </div>
 
-        {/* Prev button — hidden on mobile, shown from sm */}
+        {/* Prev button */}
         <button
           onClick={prevSlide}
           className="hidden sm:flex absolute top-1/2 left-3 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-2 rounded-full transition"
@@ -183,7 +183,7 @@ const slide = slides[realIndex] ?? slides[0]; // ← add this fallback
           <ChevronLeft size={24} />
         </button>
 
-        {/* Next button — hidden on mobile, shown from sm */}
+        {/* Next button */}
         <button
           onClick={nextSlide}
           className="hidden sm:flex absolute top-1/2 right-3 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-2 rounded-full transition"

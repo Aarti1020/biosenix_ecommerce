@@ -78,7 +78,7 @@ const page = () => {
                 {[
                   { icon: <Mail className="w-4 h-4" />, text: "ebrainsoftwareandsolutions@gmail.com" },
                   { icon: <Smartphone className="w-4 h-4" />, text: "+91 9974710001" },
-                  { icon: <MapPin className="w-4 h-4" />, text: "Nadiad, Gujarat – 387002, India" },
+                  { icon: <MapPin className="w-4 h-4" />, text: "" },
                 ].map(({ icon, text }, i) => (
                   <div key={i} className="flex items-center gap-3 text-sm text-blue-100">
                     <span className="text-cyan-400 shrink-0">{icon}</span>
@@ -233,19 +233,26 @@ const page = () => {
             <p className="text-blue-200/70 text-sm leading-relaxed">
               Questions about your application, exam, or joining process? Use the channels below.
             </p>
-            <div className="flex flex-col gap-2 mt-1">
-              {[
-                { label: "Recruitment", value: "Handled via our Careers Page only" },
-                { label: "Freelancers", value: "Use WhatsApp support from your joining kit" },
-                { label: "CV Submission", value: "join@hireinglobal.com" },
-                { label: "Exam Support", value: "exam@hireinglobal.com" },
-              ].map(({ label, value }) => (
-                <div key={label} className="flex items-start justify-between gap-3 border-b border-white/10 pb-2 last:border-0 last:pb-0">
-                  <span className="text-white text-xs font-semibold uppercase tracking-wide shrink-0 pt-0.5">{label}</span>
-                  <span className="text-blue-100 text-sm text-right">{value}</span>
-                </div>
-              ))}
-            </div>
+           <div className="flex flex-col gap-2 mt-1">
+  {[
+    { label: "Recruitment", value: "Handled via our Careers Page only" },
+    { label: "Freelancers", value: "Use WhatsApp support from your joining kit" },
+    { label: "CV Submission", value: "contact@ebrainsoftware@gmail.com" },
+    { label: "Exam Support", value: "contact@ebrainsoftware@gmail.com" },
+  ].map(({ label, value }) => (
+    <div
+      key={label}
+      className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0.5 sm:gap-3 border-b border-white/10 pb-2 last:border-0 last:pb-0"
+    >
+      <span className="text-white text-xs font-semibold uppercase tracking-wide shrink-0">
+        {label}
+      </span>
+      <span className="text-blue-100 text-xs sm:text-sm sm:text-right break-all">
+        {value}
+      </span>
+    </div>
+  ))}
+</div>
           </motion.div>
 
           {/* Headquarters */}
@@ -260,7 +267,7 @@ const page = () => {
               <div className="flex items-start gap-3 bg-white/5 rounded-xl px-4 py-3">
                 <MapPin className="w-4 h-4 text-cyan-400 mt-0.5 shrink-0" />
                 <p className="text-blue-100 text-sm leading-relaxed">
-                  Hire in Global, Near Gitanjali chokdi, Pij Road, Nadiad, Gujarat – 387002, India
+                  1st Floor, R.M.Nagar Main Road, Doddabanswadi, Bangalore, Karnataka
                 </p>
               </div>
               <div className="flex items-start gap-3 bg-white/5 rounded-xl px-4 py-3">

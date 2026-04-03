@@ -40,24 +40,26 @@ const CoursesDropdown = () => {
           {section.title}
         </h3>
 
-          {section.items.map((item, i) => (
-            <Link
-              key={i}
-              href={item.path}
-              className="hover:text-blue-600 transition font-semibold text-gray-700 p-1"
-            >
-              {item.name}
-          {(
-              item.name.toLowerCase() === "captcha processing executive course" ||
-              item.name.toLowerCase() === "document conversion specialist course" ||
-              item.name.toLowerCase() === "data segregation specialist course"
-            ) && (
-          <span className="absolute bg-orange-500 text-white text-xs px-2 py-1 rounded-lg mx-2">
-              Trending
-          </span>
-          )}
-            </Link>
-          ))}
+         
+            {section.items.map((item, i) => (
+  <Link
+    key={i}
+    href={item.path}
+    className="hover:text-blue-600 transition font-semibold text-gray-700 p-1 flex items-center gap-2 flex-wrap"
+  >
+    {item.name}
+    {(
+      item.name.toLowerCase() === "captcha processing executive course" ||
+      item.name.toLowerCase() === "document conversion specialist course" ||
+      item.name.toLowerCase() === "data segregation specialist course"
+    ) && (
+      <span className="bg-orange-500 text-white text-xs px-2 py-0.5 rounded-lg shrink-0">
+        Trending
+      </span>
+    )}
+  </Link>
+))}
+        
 
          
 

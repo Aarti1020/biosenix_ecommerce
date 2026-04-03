@@ -28,23 +28,23 @@ const cards = [
 
 export default function SoftwareNSolutions() {
   return (
-    <div className="px-6 md:px-16 py-10 ms-12">
+    <div className="px-4 sm:px-6 md:px-16 py-8 sm:py-10">
 
       {/* Heading */}
-      <div className="mb-8 ms-2">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+      <div className="mb-6 sm:mb-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
           Software & Solutions
         </h2>
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
         {cards.map((card, index) => {
           const Icon = card.icon;
           return (
             <div
               key={index}
-              className={`relative rounded-2xl p-6 text-white overflow-hidden shadow-lg bg-gradient-to-r ${card.bg}`}
+              className={`relative rounded-2xl p-5 sm:p-6 text-white overflow-hidden shadow-lg bg-gradient-to-r ${card.bg}`}
             >
               {/* Icon */}
               <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
@@ -52,7 +52,7 @@ export default function SoftwareNSolutions() {
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold mt-4 leading-snug">
+              <h3 className="text-lg sm:text-xl font-bold mt-4 leading-snug">
                 {card.title}
               </h3>
 
