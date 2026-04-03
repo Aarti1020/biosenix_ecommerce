@@ -101,11 +101,11 @@ export default function HeroSection() {
   const nextSlide = () => { setCurrent((prev) => prev + 1); setTransition(true); };
 
   const realIndex =
-    current === 0 ? slides.length - 1
-    : current === extendedSlides.length - 1 ? 0
-    : current - 1;
+  current === 0 ? slides.length - 1
+  : current === extendedSlides.length - 1 ? 0
+  : current - 1;
 
-  const slide = slides[realIndex];
+const slide = slides[realIndex] ?? slides[0]; // ← add this fallback
 
   return (
     <>
