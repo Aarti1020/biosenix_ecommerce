@@ -9,6 +9,7 @@ import LogoCarosel from "@/components/LogoCarosel";
 const slides = [
   {
     image: "/carosel1.jpeg",
+    mobileImage: "/mobile_view_carosel.jpeg",
     badge: "Trusted Platform",
     heading: "Access Real Projects &",
     highlight: "Remote Work",
@@ -22,6 +23,7 @@ const slides = [
   },
   {
     image: "/carosel2.jpeg",
+    mobileImage: "/carosel2-mobile-view.jpeg",
     badge: "Trusted Platform",
     heading: "Learn In-Demand Digital Skills with",
     highlight: "Practical Training",
@@ -35,6 +37,7 @@ const slides = [
   },
   {
     image: "/carosel3.jpeg",
+    mobileImage: "/carosel3-mobile-view.jpeg",
     badge: "Trusted Platform",
     heading: "Powerful Software Platforms for",
     highlight: "Digital Operations",
@@ -48,6 +51,7 @@ const slides = [
   },
   {
     image: "/carosel5.jpeg",
+    mobileImage: "/carosel5-mobile-view.jpeg",
     badge: "Trusted Platform",
     heading: "Empowering Digital Work with",
     highlight: "Smart Software & Scalable",
@@ -61,6 +65,7 @@ const slides = [
   },
   {
     image: "/carosel6.jpeg",
+    mobileImage: "/carsole7_mobile_view.jpeg",
     badge: "Trusted Platform",
     heading: "Start Working on",
     highlight: "Remote Digital",
@@ -74,11 +79,25 @@ const slides = [
   },
 ];
 
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  return isMobile;
+}
+
 export default function HeroSection() {
   const extendedSlides = [slides[slides.length - 1], ...slides, slides[0]];
 
   const [current, setCurrent] = useState(1);
   const [transition, setTransition] = useState(true);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -121,16 +140,16 @@ export default function HeroSection() {
         >
           {extendedSlides.map((s, index) => (
             <div key={index} className="min-w-full h-full relative flex-shrink-0">
-  <Image
-    src={s.image}
-    alt="carousel image"
-    fill
-    sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 100vw"
-    className="object-cover object-center"
-    priority={index <= 2}
-  />
-  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-950/70 to-blue-950/40 sm:from-blue-950/85 sm:via-blue-950/50 sm:to-transparent" />
-</div>
+              <Image
+                src={isMobile && s.mobileImage ? s.mobileImage : s.image}
+                alt="carousel image"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 100vw"
+                className="object-cover object-center"
+                priority={index <= 2}
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-950/70 to-blue-950/40 sm:from-blue-950/85 sm:via-blue-950/50 sm:to-transparent" />
+            </div>
           ))}
         </div>
 

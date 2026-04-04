@@ -7,7 +7,7 @@ export const courseData = {
     discount: "₹10,001",
     rating: 4.5,
     updatedIn: "Jan 26",
-    badge: "Gurrantted Jobs",
+    badge: "Guarantee Jobs",
     features: [
       "Get placed with ₹3-10 LPA salary",
       "Course fee refund if not placed",
@@ -42,7 +42,7 @@ export const courseData = {
     // discount: "₹10,001",
     rating: 4.7,
     updatedIn: "Feb 26",
-    badge: "Gurrantted Jobs",
+    badge: "Guarantee Jobs",
     features: [
       "Get placed with ₹2-6 LPA salary",
       "Work on real Freelancing projects",
@@ -60,7 +60,7 @@ export const courseData = {
     // discount: "₹10,001",
     rating: 4.7,
     updatedIn: "Feb 26",
-    badge: "Gurrantted Jobs",
+    badge: "Guarantee Jobs",
     features: [
       "Get placed with ₹2-7 LPA salary",
       "Work on real Freelancing projects",
@@ -78,7 +78,7 @@ export const courseData = {
     // discount: "₹10,001",
     rating: 4.7,
     updatedIn: "Feb 26",
-    badge: "Gurrantted Jobs",
+    badge: "Guarantee Jobs",
     features: [
       "Get placed with ₹2-7 LPA salary",
       "Work on real Freelancing projects",
@@ -98,7 +98,7 @@ export const defaultCourse = {
   discount: null,
   rating: 4.5,
   updatedIn: "Jan 26",
-  badge: "Gurrantted Jobs",
+  badge: "Guarantee Jobs",
   features: [
     "Get placed with ₹3-10 LPA salary",
     "Course fee refund if not placed",
