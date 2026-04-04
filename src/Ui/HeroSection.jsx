@@ -128,7 +128,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <div className="relative w-full h-[420px] sm:h-[520px] md:h-[600px] lg:h-[650px] overflow-hidden">
+      <div className="relative w-full h-[420px] sm:h-[520px] md:h-[600px] lg:h-[550px] overflow-hidden">
 
         {/* Slides */}
         <div
@@ -226,7 +226,7 @@ export default function HeroSection() {
       </div>
 
       {/* Logo Carousel */}
-      <div className="bg-blue-950 border-t border-white/10">
+      <div >
         <LogoCarosel />
       </div>
     </>

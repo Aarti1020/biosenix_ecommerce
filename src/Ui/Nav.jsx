@@ -203,13 +203,13 @@ const Nav = () => {
 
       {/* 🔹 Internships Dropdown */}
           <div>
-  <div className="cursor-pointer font-semibold flex justify-between items-center">
+  <div className="cursor-pointer font-semibold flex justify-between  ">
     <Link href="/internships" className="flex-1">
       Jobs
     </Link>
     <span
       onClick={() => setActiveMenu(activeMenu === "internship" ? null : "internship")}
-      className="px-2"
+      
     >
       {activeMenu === "internship" ? "▲" : "▼"}
     </span>

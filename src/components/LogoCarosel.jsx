@@ -40,8 +40,8 @@ export default function LogoCarosel() {
       {/* RIGHT CAROUSEL */}
       <div className="relative flex-1 overflow-hidden min-w-0">
         {/* Fade masks */}
-        <div className="absolute left-0 top-0 h-full w-6 sm:w-12 bg-gradient-to-r from-orange-500 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 h-full w-6 sm:w-12 bg-gradient-to-l from-orange-600 to-transparent z-10 pointer-events-none" />
+        {/* <div className="absolute left-0 top-0 h-full w-6 sm:w-12 bg-gradient-to-r from-orange-500 to-transparent z-10 pointer-events-none" /> */}
+        {/* <div className="absolute right-0 top-0 h-full w-6 sm:w-12 bg-gradient-to-l from-orange-600 to-transparent z-10 pointer-events-none" /> */}
 
         <div className="flex w-max animate-scroll gap-5 sm:gap-10 items-center">
           {[...logos, ...logos].map((logo, index) => (
