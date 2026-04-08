@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight, TrendingUp } from "lucide-react";
 
 const cards = [
-  { bgImage: "/coursecaptcha1.png" },
+  { bgImage: "/t2.png" },
   { bgImage: "/documentcoursebanner.png" },
   { bgImage: "/ds.png" },
 ];
@@ -48,7 +48,7 @@ export default function CoursesComponent() {
             >
               {/* Image Card */}
               <div
-                className="rounded-xl sm:rounded-2xl overflow-hidden shadow-lg bg-cover bg-center
+                className="rounded-lg sm:rounded-2xl overflow-hidden shadow-lg bg-cover bg-center
                   h-44 xs:h-52 sm:h-64 md:h-72 lg:h-80
                   hover:scale-105 transition duration-300"
                 style={{ backgroundImage: `url(${card.bgImage})` }}

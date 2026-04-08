@@ -93,7 +93,7 @@ export const courseData = {
 export const defaultCourse = {
   duration: "6 months",
   batchDate: "Coming Soon",
-  price: "₹--",
+  price: "₹9999",
   oldPrice: null,
   discount: null,
   rating: 4.5,

@@ -78,7 +78,7 @@ const page = () => {
                 {[
                   { icon: <Mail className="w-4 h-4" />, text: "ebrainsoftwareandsolutions@gmail.com" },
                   { icon: <Smartphone className="w-4 h-4" />, text: "+91 9974710001" },
-                  { icon: <MapPin className="w-4 h-4" />, text: "" },
+                  { icon: <MapPin className="w-4 h-4" />, text: "1st Floor, R.M.Nagar Main Road, Doddabanswadi, Bangalore, Karnataka" },
                 ].map(({ icon, text }, i) => (
                   <div key={i} className="flex items-center gap-3 text-sm text-blue-100">
                     <span className="text-cyan-400 shrink-0">{icon}</span>
@@ -238,7 +238,7 @@ const page = () => {
     { label: "Recruitment", value: "Handled via our Careers Page only" },
     { label: "Freelancers", value: "Use WhatsApp support from your joining kit" },
     { label: "CV Submission", value: "contact@ebrainsoftware@gmail.com" },
-    { label: "Exam Support", value: "contact@ebrainsoftware@gmail.com" },
+    { label: "Customer Support", value: "contact@ebrainsoftware@gmail.com" },
   ].map(({ label, value }) => (
     <div
       key={label}

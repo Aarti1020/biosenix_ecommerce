@@ -49,7 +49,8 @@ const Nav = () => {
       
       {/* Navbar */}
       <div className='flex items-center justify-between px-20 py-4'>
-        
+        <Link href="/" >
+
         {/* Logo */}
         <Image
           src="/ESS.png"
@@ -57,7 +58,7 @@ const Nav = () => {
           width={160}
           height={2}
         />
-
+</Link>
         {/* Desktop Links */}
         <div className='hidden sm:flex flex-row items-center gap-8'>
 
