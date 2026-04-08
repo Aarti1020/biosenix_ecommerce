@@ -211,7 +211,7 @@ export default function Page() {
               className="border border-gray-300 p-2 rounded-md w-full outline-none focus:ring-2 focus:ring-blue-400 text-sm"
             />
           </div>
-
+{/* 
           <div className="grid grid-cols-2 gap-3 sm:gap-4 mt-3 sm:mt-4">
             <div className="flex flex-col">
               <label className="text-sm mb-1 font-medium">Education</label>
@@ -231,7 +231,7 @@ export default function Page() {
                 <option>2025</option>
               </select>
             </div>
-          </div>
+          </div> */}
 
           <button className="w-full bg-blue-500 text-white py-2.5 rounded-md mt-5 hover:bg-blue-600 transition font-medium cursor-pointer text-sm sm:text-base">
             Apply now
