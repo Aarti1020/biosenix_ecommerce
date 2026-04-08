@@ -34,7 +34,7 @@ export const courseData = {
     degreeOptions: ["B.Tech", "B.Sc", "MCA", "M.Tech"],
     graduationYears: ["2023", "2024", "2025", "2026"],
   },
-  "captcha-processing": {
+  "captcha-processing ": {
     duration: "3 days",
     batchDate: "10th Apr",
     price: "₹1,999*",

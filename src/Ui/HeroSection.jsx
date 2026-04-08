@@ -17,8 +17,8 @@ const slides = [
     highlightColor: "text-orange-400",
     description:
       "Join our platform to work on live projects, gain experience, and build a stable remote working career with continuous project opportunities.",
-    primaryBtn: { label: "View Opportunities", href: "/services" },
-    secondaryBtn: { label: "Apply Now", href: "/careers" },
+    primaryBtn: { label: "View Opportunities", href: "/internships" },
+    secondaryBtn: { label: "Apply Now", href: "/internships" },
     primaryColor: "bg-orange-400 hover:bg-orange-300 text-white shadow-orange-500/30",
   },
   {
@@ -31,7 +31,7 @@ const slides = [
     highlightColor: "text-orange-400",
     description:
       "Our structured training and certification programs help individuals build practical skills, gain real project experience, and prepare for remote work opportunities.",
-    primaryBtn: { label: "View Courses", href: "/services" },
+    primaryBtn: { label: "View Courses", href: "/courses" },
     secondaryBtn: { label: "Start Learning", href: "/careers" },
     primaryColor: "bg-orange-400 hover:bg-orange-300 text-white shadow-orange-500/30",
   },
@@ -176,7 +176,7 @@ export default function HeroSection() {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-row gap-2 sm:gap-3 mt-1 flex-wrap">
+            {/* <div className="flex flex-row gap-2 sm:gap-3 mt-1 flex-wrap">
               <Link href={slide.primaryBtn.href}>
                 <button className={`inline-flex items-center justify-center gap-1.5 ${slide.primaryColor} font-bold text-xs sm:text-sm px-4 sm:px-6 py-2.5 sm:py-3 rounded-full transition-all duration-200 shadow-lg active:scale-95`}>
                   {slide.primaryBtn.label}
@@ -189,7 +189,7 @@ export default function HeroSection() {
                   {slide.secondaryBtn.label}
                 </button>
               </Link>
-            </div>
+            </div> */}
 
           </div>
         </div>

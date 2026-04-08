@@ -1,13 +1,15 @@
 "use client";
 
 import { Cpu, FileText, ClipboardList } from "lucide-react";
-
+import { useRouter } from "next/navigation";
+ 
 const cards = [
   {
     icon: Cpu,
     title: "Captcha Solvex Software",
     desc: "Our Bank Captcha Verification Software helps users quickly and accurately solve captcha verification tasks through a secure and user-friendly interface.",
     btn: "Buy Now",
+    path:"/solution/captcha-solvex-software",
     bg: "from-teal-500 to-green-400",
   },
   {
@@ -15,6 +17,7 @@ const cards = [
     title: "TextFlow Software",
     desc: "Our Data Typing Software is designed for text typing and document conversion work.",
     btn: "Buy Now",
+    path:"/solution/text-flow-software",
     bg: "from-blue-600 to-blue-800",
   },
   {
@@ -22,11 +25,13 @@ const cards = [
     title: "QuickFill Software",
     desc: "Our Form Filling Software helps users fill online forms quickly using copy-paste data automation tools.",
     btn: "Buy Now",
+    path:"/solution/quickfill-software",
     bg: "from-purple-900 via-blue-900 to-green-500",
   },
 ];
 
 export default function SoftwareNSolutions() {
+  const router = useRouter(); 
   return (
     <div className="px-4 sm:px-6 md:px-16 py-8 sm:py-10">
 
@@ -59,7 +64,8 @@ export default function SoftwareNSolutions() {
               <p className="text-sm mt-2 opacity-90">{card.desc}</p>
 
               {/* Button */}
-              <button className="mt-5 bg-yellow-500 hover:bg-yellow-400 text-black px-4 py-2 rounded-md text-sm font-medium cursor-pointer transition-colors">
+              <button onClick={() => router.push(card.path)}
+              className="mt-5 bg-yellow-500 hover:bg-yellow-400 text-black px-4 py-2 rounded-md text-sm font-medium cursor-pointer transition-colors">
                 {card.btn}
               </button>
             </div>

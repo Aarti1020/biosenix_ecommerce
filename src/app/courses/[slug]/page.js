@@ -136,7 +136,7 @@ export default function CoursePage() {
 
           {/* RIGHT FORM */}
           <div className="w-full lg:w-auto lg:min-w-[380px] lg:max-w-md bg-white text-black rounded-xl p-5 sm:p-6 shadow-lg border border-purple-300 lg:ms-10 lg:mt-8">
-            <h3 className="text-lg font-semibold mb-1">Interested? Apply Now</h3>
+            <h3 className="text-lg font-semibold mb-1">Interested? Enroll Now</h3>
 
             <p className="text-xs text-indigo-600 font-medium mb-4 bg-indigo-50 px-3 py-1 rounded-full inline-block">
               {courseTitle}
@@ -237,7 +237,7 @@ export default function CoursePage() {
               disabled={status === "loading"}
               className="w-full bg-blue-500 text-white py-2.5 rounded-md mt-5 hover:bg-blue-600 transition font-medium disabled:opacity-60 disabled:cursor-not-allowed text-sm sm:text-base"
             >
-              {status === "loading" ? "Submitting..." : "Apply now"}
+              {status === "loading" ? "Submitting..." : "Enroll now"}
             </button>
 
             <p className="text-xs text-gray-500 mt-4 text-center">

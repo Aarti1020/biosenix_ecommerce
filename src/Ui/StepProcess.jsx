@@ -12,6 +12,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const courses = [
   {
@@ -102,6 +103,8 @@ const courses = [
 
 const CourseCard = ({ course }) => {
   const Icon = course.icon;
+  const router = useRouter(); // ✅ ADD
+
   return (
     <div
       className={`bg-white rounded-2xl p-6 flex flex-col justify-between gap-4 cursor-pointer border-t-4 border-t-transparent ${course.borderHover} border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full`}
@@ -135,8 +138,9 @@ const CourseCard = ({ course }) => {
         </div>
       </div>
 
-      <button
-        className={`w-full py-2.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 bg-slate-100 text-slate-600 ${course.btnHover} transition-all duration-300`}
+         <button
+        onClick={() => router.push(course.path)} // ✅ ADD THIS
+        className={`w-full py-2.5 rounded-xl text-sm font-semibold cursor-pointer flex items-center justify-center gap-2 bg-slate-100 text-slate-600 ${course.btnHover}`}
       >
         Enroll Now
         <ArrowRight className="w-4 h-4" />
